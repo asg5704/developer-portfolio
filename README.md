@@ -1,4 +1,4 @@
-# Developer Portfolio v4
+# Developer Portfolio
 
 A modern, high-performance portfolio website built with Rust WebAssembly, Svelte, and Vite. This project demonstrates the power of combining systems programming with modern web technologies.
 
