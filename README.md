@@ -2,6 +2,9 @@
 
 A modern, high-performance portfolio website built with Rust WebAssembly, Svelte, and Vite. This project demonstrates the power of combining systems programming with modern web technologies.
 
+<img width="1400" height="845" alt="Screenshot 2025-09-11 at 1 58 13 PM" src="https://github.com/user-attachments/assets/5d65f54c-507a-4076-977c-f41fa074a4b4" />
+
+
 ## 🚀 Features
 
 - **Rust WASM Integration** - Core portfolio logic written in Rust and compiled to WebAssembly
