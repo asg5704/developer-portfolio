@@ -2,6 +2,9 @@
 
 A modern, responsive portfolio website template built with TypeScript, Nuxt.js, Vite, and Radix UI components. Perfect for software engineers looking to showcase their skills and projects.
 
+<img width="1559" height="817" alt="Screenshot 2025-09-11 at 8 51 28 PM" src="https://github.com/user-attachments/assets/637280da-525f-4913-8bda-ceeabe6dbeb6" />
+
+
 ## 🚀 Features
 
 - **Modern Tech Stack**: Built with Nuxt 3, TypeScript, and Vite
