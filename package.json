@@ -1,22 +1,27 @@
 {
   "name": "developer-portfolio",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "build-wasm": "node build-wasm.js",
-    "dev": "npm run build-wasm && vite",
-    "build": "npm run build-wasm && vite build",
-    "preview": "vite preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.1.2",
-    "svelte": "^4.2.7",
-    "vite": "^5.4.19"
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "nuxt": "^3.12.4",
+    "typescript": "^5.5.3"
   },
   "dependencies": {
-    "highlight.js": "^11.11.1",
-    "vite-plugin-top-level-await": "^1.4.1",
-    "vite-plugin-wasm": "^3.3.0"
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@vueuse/nuxt": "^10.11.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.427.0",
+    "radix-vue": "^1.9.4",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
