@@ -149,8 +149,8 @@ This template can be deployed to various platforms:
 ## 📁 Project Structure
 
 ```
-├── assets/          # CSS and static assets
-├── components/      # Vue components
+├── assets/         # CSS and static assets
+├── components/     # Vue components
 ├── data/           # Portfolio data configuration
 ├── layouts/        # Nuxt layouts
 ├── pages/          # Application pages
