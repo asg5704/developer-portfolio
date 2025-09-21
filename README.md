@@ -27,7 +27,7 @@ A modern, responsive portfolio website template built with TypeScript, Nuxt.js, 
 
 1. Clone this repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/asg5704/developer-portfolio.git
 cd developer-portfolio
 ```
 
