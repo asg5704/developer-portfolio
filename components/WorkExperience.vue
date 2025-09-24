@@ -12,7 +12,7 @@
       <div class="">
         <div class="flex flex-col justify-start gap-4 mx-auto">
           <div v-for="company in props.workExperience" :key="company.companyName"
-            class="flex items-center bg-card gap-x-2">
+            class="flex flex-row items-center bg-card gap-x-2">
             <!-- Skill Logo/Icon -->
             <!-- Uncomment to add -->
             <div class="w-12 h-12 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -23,10 +23,10 @@
             <!-- Company Name -->
             <h4 class="font-medium text-base flex flex-col text-card-foreground group-hover:text-accent-foreground">
               {{ company.companyName }}
-              <span className="font-normal text-sm">{{ company.jobTitle }}</span>
+              <span class="font-normal text-sm">{{ company.jobTitle }}</span>
             </h4>
 
-            <p className="flex-1 font-normal text-base text-muted-foreground text-right">
+            <p class="flex-1 font-normal text-base text-muted-foreground text-right">
               {{ company.dates }}
             </p>
           </div>
