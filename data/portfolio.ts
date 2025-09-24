@@ -150,4 +150,21 @@ export const portfolioData: PortfolioData = {
       startDate: "2024-01-01",
     },
   ],
+  workExperience: [
+    {
+      companyName: "Shopify",
+      jobTitle: "Software Engineer",
+      dates: "May 2021 - Oct 2022",
+    },
+    {
+      companyName: "Trusted Mission Solutions",
+      jobTitle: "Software Engineer",
+      dates: "May 2021 - Oct 2022",
+    },
+    {
+      companyName: "General Dynamics",
+      jobTitle: "Software Engineer",
+      dates: "May 2021 - Oct 2022",
+    },
+  ],
 };

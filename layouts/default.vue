@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-background">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 max-w-4xl">
         <div class="flex items-center justify-between h-16">
           <!-- Logo/Name -->
           <div class="font-bold text-xl text-heading">
@@ -51,7 +51,7 @@
 
     <!-- Footer -->
     <footer class="py-12 px-4 bg-muted/30 border-t border-border">
-      <div class="container mx-auto max-w-6xl">
+      <div class="container mx-auto max-w-4xl">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="text-center md:text-left">
             <p class="text-muted-foreground">
@@ -81,7 +81,7 @@
 
 <script setup lang="ts">
 import { Menu, X, Github, Linkedin, Twitter } from 'lucide-vue-next'
-import { portfolioData } from '~/data/portfolio'
+import { portfolioData } from '~/data/portfolio';
 
 const mobileMenuOpen = ref(false)
 
