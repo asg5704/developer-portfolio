@@ -4,40 +4,34 @@
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-heading mb-4">
-          Featured Projects
+          Project showcase
         </h2>
         <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-          A selection of projects that showcase my skills and experience
+          I've worked on a huge variety of projects, however here are a selection of my favorite projects that showcase
+          my skills and experience
         </p>
       </div>
 
       <!-- Project Filter -->
       <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <button
-          v-for="filter in filters"
-          :key="filter"
-          @click="activeFilter = filter"
-          class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-          :class="activeFilter === filter 
-            ? 'bg-primary text-primary-foreground' 
-            : 'bg-card text-card-foreground hover:bg-accent hover:text-accent-foreground'"
-        >
+        <button v-for="filter in filters" :key="filter" @click="activeFilter = filter"
+          class="px-4 py-2 rounded-full text-sm font-medium transition-colors" :class="activeFilter === filter
+            ? 'bg-primary text-primary-foreground'
+            : 'bg-card text-card-foreground hover:bg-accent hover:text-accent-foreground'">
           {{ filter }}
         </button>
       </div>
 
       <!-- Projects Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          v-for="project in filteredProjects"
-          :key="project.id"
-          class="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-border hover:border-primary/20"
-        >
+        <div v-for="project in filteredProjects" :key="project.id"
+          class="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-border hover:border-primary/20">
           <!-- Project Image/Placeholder -->
           <div class="relative h-48 bg-gradient-to-br from-primary/10 to-secondary/10 overflow-hidden">
             <div v-if="project.imageUrl" class="w-full h-full">
               <!-- Placeholder for image -->
-              <div class="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+              <div
+                class="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                 <span class="text-muted-foreground text-sm">{{ project.title }}</span>
               </div>
             </div>
@@ -46,20 +40,18 @@
                 <Code class="w-16 h-16" />
               </div>
             </div>
-            
+
             <!-- Status Badge -->
             <div class="absolute top-4 right-4">
-              <span
-                class="px-2 py-1 text-xs rounded-full"
-                :class="getStatusColor(project.status)"
-              >
+              <span class="px-2 py-1 text-xs rounded-full" :class="getStatusColor(project.status)">
                 {{ project.status }}
               </span>
             </div>
 
             <!-- Featured Badge -->
             <div v-if="project.featured" class="absolute top-4 left-4">
-              <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+              <span
+                class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
                 Featured
               </span>
             </div>
@@ -78,40 +70,25 @@
 
             <!-- Technologies -->
             <div class="flex flex-wrap gap-2">
-              <span
-                v-for="tech in project.technologies.slice(0, 3)"
-                :key="tech"
-                class="px-2 py-1 text-xs rounded-md bg-secondary text-secondary-foreground"
-              >
+              <span v-for="tech in project.technologies.slice(0, 3)" :key="tech"
+                class="px-2 py-1 text-xs rounded-md bg-secondary text-secondary-foreground">
                 {{ tech }}
               </span>
-              <span
-                v-if="project.technologies.length > 3"
-                class="px-2 py-1 text-xs rounded-md bg-muted text-muted-foreground"
-              >
+              <span v-if="project.technologies.length > 3"
+                class="px-2 py-1 text-xs rounded-md bg-muted text-muted-foreground">
                 +{{ project.technologies.length - 3 }}
               </span>
             </div>
 
             <!-- Project Links -->
             <div class="flex gap-3 pt-2">
-              <a
-                v-if="project.githubUrl"
-                :href="project.githubUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Github class="w-4 h-4" />
                 Code
               </a>
-              <a
-                v-if="project.liveUrl"
-                :href="project.liveUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <ExternalLink class="w-4 h-4" />
                 Live Demo
               </a>
@@ -122,10 +99,8 @@
 
       <!-- Show More Button -->
       <div v-if="hasMoreProjects" class="text-center mt-12">
-        <button
-          @click="showAllProjects = !showAllProjects"
-          class="px-6 py-3 bg-card text-card-foreground rounded-lg font-medium hover:bg-accent hover:text-accent-foreground transition-colors border border-border"
-        >
+        <button @click="showAllProjects = !showAllProjects"
+          class="px-6 py-3 bg-card text-card-foreground rounded-lg font-medium hover:bg-accent hover:text-accent-foreground transition-colors border border-border">
           {{ showAllProjects ? 'Show Less' : 'View All Projects' }}
         </button>
       </div>

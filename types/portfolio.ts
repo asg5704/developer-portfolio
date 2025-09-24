@@ -12,6 +12,7 @@ export interface PortfolioData {
   };
   skills: Skill[];
   projects: Project[];
+  workExperience: WorkExperience[];
 }
 
 export interface Skill {
@@ -23,6 +24,13 @@ export interface Skill {
     | "Tools"
     | "Languages";
   logo?: string;
+}
+
+export interface WorkExperience {
+  companyName: string;
+  companyIcon?: string;
+  jobTitle: string;
+  dates: string;
 }
 
 export interface Project {

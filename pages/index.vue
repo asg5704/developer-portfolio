@@ -3,6 +3,9 @@
     <!-- Hero Section -->
     <HeroSection :data="portfolioData" />
 
+    <!-- Work Experience -->
+    <WorkExperience :work-experience="portfolioData.workExperience" />
+
     <!-- Skills Section -->
     <SkillsSection :skills="portfolioData.skills" />
 

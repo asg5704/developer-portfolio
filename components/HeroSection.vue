@@ -1,10 +1,11 @@
 <template>
-  <section class="relative py-20 px-4 bg-gradient-to-br from-background to-muted">
-    <div class="container mx-auto max-w-6xl">
-      <div class="text-center space-y-8">
+  <section class="relative py-20 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <div class="text-left space-y-8">
         <!-- Avatar/Photo -->
-        <div class="relative w-32 h-32 mx-auto mb-8">
-          <div class="w-full h-full rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+        <div class="relative w-24 h-24 mb-8">
+          <div
+            class="w-full h-full rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
             <span class="text-4xl font-bold text-primary-foreground">
               {{ getInitials(data.name) }}
             </span>
@@ -14,20 +15,18 @@
         <!-- Name and Title -->
         <div class="space-y-4">
           <h1 class="text-4xl md:text-6xl font-bold text-heading">
-            {{ data.name }}
+            Hi, I'm {{ data.name }} 👋
           </h1>
-          <h2 class="text-xl md:text-2xl text-heading font-medium">
-            {{ data.title }}
-          </h2>
+          <p class="text-lg text-muted-foreground max-w-xl leading-relaxed">
+            {{ data.bio }}
+          </p>
         </div>
 
         <!-- Bio -->
-        <p class="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          {{ data.bio }}
-        </p>
+
 
         <!-- Location and Contact -->
-        <div class="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+        <div class="flex flex-wrap justify-start gap-6 text-sm text-muted-foreground">
           <div class="flex items-center gap-2">
             <MapPin class="w-4 h-4" />
             <span>{{ data.location }}</span>
@@ -41,54 +40,32 @@
         </div>
 
         <!-- Social Links -->
-        <div class="flex justify-center gap-4">
-          <a
-            v-if="data.links.github"
-            :href="data.links.github"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group"
-          >
+        <div class="flex justify-start gap-4">
+          <a v-if="data.links.github" :href="data.links.github" target="_blank" rel="noopener noreferrer"
+            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group">
             <Github class="w-5 h-5 text-muted-foreground group-hover:text-foreground" />
           </a>
-          <a
-            v-if="data.links.linkedin"
-            :href="data.links.linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group"
-          >
+          <a v-if="data.links.linkedin" :href="data.links.linkedin" target="_blank" rel="noopener noreferrer"
+            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group">
             <Linkedin class="w-5 h-5 text-muted-foreground group-hover:text-foreground" />
           </a>
-          <a
-            v-if="data.links.website"
-            :href="data.links.website"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group"
-          >
+          <a v-if="data.links.website" :href="data.links.website" target="_blank" rel="noopener noreferrer"
+            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group">
             <ExternalLink class="w-5 h-5 text-muted-foreground group-hover:text-foreground" />
           </a>
-          <a
-            v-if="data.links.twitter"
-            :href="data.links.twitter"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group"
-          >
+          <a v-if="data.links.twitter" :href="data.links.twitter" target="_blank" rel="noopener noreferrer"
+            class="p-3 rounded-full bg-card hover:bg-accent transition-colors group">
             <Twitter class="w-5 h-5 text-muted-foreground group-hover:text-foreground" />
           </a>
         </div>
 
         <!-- CTA Button -->
-        <div class="pt-8">
-          <button
-            @click="scrollToProjects"
-            class="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-          >
+        <!-- <div class="pt-8">
+          <button @click="scrollToProjects"
+            class="px-8 py-3 bg-red-500 text-white rounded-lg font-medium hover:bg-red-500/90 transition-colors">
             View My Work
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
